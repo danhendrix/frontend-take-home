@@ -51,7 +51,7 @@ function App() {
     }
 
     return (
-        <Box width='100%' >
+        <Container size='3'>
             <Tabs.Root defaultValue="users">
                 <Tabs.List>
                     <Tabs.Trigger value="users">Users</Tabs.Trigger>
@@ -136,7 +136,7 @@ function App() {
                     </Tabs.Content>
                 </Box>
             </Tabs.Root>
-        </Box>
+        </Container>
     );
 }
 

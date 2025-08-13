@@ -51,7 +51,7 @@ function App() {
     }
 
     return (
-        <Box width={'100%'} >
+        <Box width='100%' >
             <Tabs.Root defaultValue="users">
                 <Tabs.List>
                     <Tabs.Trigger value="users">Users</Tabs.Trigger>
@@ -66,7 +66,7 @@ function App() {
                             </TextField.Slot>
                         </TextField.Root>
 
-                        <Table.Root layout={'auto'}>
+                        <Table.Root layout='auto'>
                             <Table.Header>
                                 <Table.Row>
                                     <Table.ColumnHeaderCell>User</Table.ColumnHeaderCell>
@@ -104,10 +104,10 @@ function App() {
                                                         </DropdownMenu.Content>
                                                     </DropdownMenu.Root>
 
-                                                    <Dialog.Content>
+                                                    <Dialog.Content style={{ maxWidth: 'fit-content', padding: '24px' }}>
                                                         <Heading size="5">Delete user</Heading>
-                                                        <Text mt={'12'}>Are you sure? The user <b>{user.first} {user.last}</b> will be permanently deleted.</Text>
-                                                        <Flex gap='12' justify='end' mt={'12'}>
+                                                        <Text mt='3'>Are you sure? The user <b>{user.first} {user.last}</b> will be permanently deleted.</Text>
+                                                        <Flex gap='3' justify='end' mt='3'>
                                                             <Dialog.Close>
                                                                 <Button variant="outline" color="gray">
                                                                     <Text style={{ color: 'black' }}>Cancel</Text>
@@ -130,7 +130,7 @@ function App() {
                     </Tabs.Content>
 
                     <Tabs.Content value='roles'>
-                        <Box width={'100%'}>
+                        <Box width='100%'>
                             <Text>Here with roles</Text>
                         </Box>
                     </Tabs.Content>

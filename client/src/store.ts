@@ -97,10 +97,10 @@ export const useUserStore = create<UserStoreState>((set, get) => ({
                     },
                 });
             }
-        } catch (err: any) {
+        } catch (err: unknown) {
             const error = err as ApiError;
             // Don't log or throw aborted requests  
-            if (error.name !== 'CanceledError' && err.code !== 'ERR_CANCELED') {
+            if (error.name !== 'CanceledError' && error.code !== 'ERR_CANCELED') {
                 console.error('Error loading users:', err);
                 throw error.message; // Re-throw for component handling
             }
@@ -128,7 +128,7 @@ export const useUserStore = create<UserStoreState>((set, get) => ({
                     data: state.users.data.filter((current) => current.id !== user.id),
                 },
             }));
-        } catch (err: any) {
+        } catch (err: unknown) {
             const error = err as ApiError;
             console.error('Failed to delete user:', err);
             throw error.message; // Re-throw for component handling
@@ -156,7 +156,7 @@ export const useUserStore = create<UserStoreState>((set, get) => ({
                     ),
                 },
             }));
-        } catch (err: any) {
+        } catch (err: unknown) {
             const error = err as ApiError;
             console.error('Failed to update role:', err);
             throw error.message; // Re-throw for component handling
@@ -205,7 +205,7 @@ export const useUserStore = create<UserStoreState>((set, get) => ({
                     },
                 });
             }
-        } catch (err: any) {
+        } catch (err: unknown) {
             const error = err as ApiError;
             // Don't log or throw aborted requests
             if (error.name !== 'CanceledError' && error.code !== 'ERR_CANCELED') {

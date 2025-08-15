@@ -58,7 +58,7 @@ function App() {
     const onDeleteUser = (user: User) => {
         const runRemoveUser = async () => {
             try {
-                removeUser(user);
+                await removeUser(user);
             } catch (err: unknown) {
                 setErrorDisplay(getErrorMessage('removing User', err as string));
             }

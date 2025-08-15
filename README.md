@@ -21,6 +21,8 @@ Welcome to my WorkOS Frontend Take-Home Assignment! This was built with [Vite](h
     npm run dev
     ```
 
+  - The application should now be running on your localhost at `http://localhost:5173/` but check your terminal to ensure you have the correct port.
+
 ### Some notes on what did not make it in
 - I don't like the cursor states for the various buttons on the page. I think a cursor type of `pointer` should be happening but by default it's not doing that. With more time I would figure out why that's happening, and maybe it's intentional.
 - Similarly to above, I don't like that the Buttons don't show an obvious visual change when they are disabled. This seems to be on purpose, and the hover state showing when they are disabled is great, but I would try to improve that.
